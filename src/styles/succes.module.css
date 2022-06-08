@@ -1,0 +1,13 @@
+.btn {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    transition: 250ms ease;
+    box-shadow: 0 0 10px #781fd8;
+    border: none;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}

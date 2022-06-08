@@ -1,0 +1,7 @@
+.main {
+    height: calc(100vh - 10vh);
+}
+
+.leafletContainer {
+    height: 100%;
+}

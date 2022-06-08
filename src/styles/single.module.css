@@ -1,0 +1,18 @@
+.single__box {
+    width: 100% !important;
+    word-wrap: break-word;
+    text-align: center;
+    color: #000000 !important;
+}
+
+
+.single__box p {
+    color: #000000;
+    width: 100% !important;
+    font-size: 1rem;
+}
+
+.single__box span {
+    font-size: 1rem;
+    color: #f54141 !important
+}

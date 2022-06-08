@@ -1,0 +1,85 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--background-color);
+    height: 10vh;
+    padding: 0 30px;
+    color: var(--white);
+}
+
+.header a {
+    text-decoration: none;
+    color: white;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+}
+
+.add__new__product {
+    font-size: 1rem;
+    padding: 8px 45px;
+    border-radius: 8px;
+    border: none;
+    background: #ffffff;
+    font-weight: 600;
+    color: #000000;
+    transition: var(--transition);
+}
+
+.add__new__product:hover {
+    background: transparent;
+    border: 2px solid white;
+    color: var(--white);
+}
+
+.search {
+    display: flex;
+}
+
+.header form {
+    display: flex;
+    align-items: center;
+    width: 230px;
+    justify-content: flex-end;
+}
+
+.header form button img {
+    margin-left: 20px;
+}
+
+.header form input {
+    border-radius: 8px;
+    border: none;
+    width: 13em;
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.search img {
+    cursor: pointer;
+}
+
+
+.nav__container {
+    background: rgba(255, 255, 255, 0.86);
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+@media screen and (max-width: 768px) {
+    .header form input {
+        margin-left: 10px;
+        width: 400px;
+    }
+
+    .header form button img {
+        margin-right: 20px;
+    }
+}

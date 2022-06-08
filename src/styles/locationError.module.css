@@ -1,0 +1,38 @@
+.error__container {
+    height: calc(100vh - 10vh);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.error__container p {
+    padding: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.error__container a {
+    padding: 0.5rem 4rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background-color: #b59fd8;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    transition: 250ms ease;
+    box-shadow: 0 0 10px #781fd8;
+    border: none;
+}
+
+.btn:hover {
+    transform: scale(1.2);
+}

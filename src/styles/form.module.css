@@ -1,0 +1,101 @@
+.form__container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    position: fixed;
+    background: rgba(146, 113, 113, 0.35);
+    z-index: 1000;
+}
+
+.form__box {
+    position: relative;
+    background: #fefefe;
+    padding: 3rem;
+    max-width: 900px;
+    border-radius: 12px;
+    margin: 1rem;
+
+}
+
+.form__box form {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+.form__box label {
+    width: auto;
+    margin: 10px;
+}
+
+.form__box h1 {
+    margin-bottom: 1rem;
+}
+
+.form__box input, .form__box textarea {
+    width: 350px;
+    padding: 0.5rem;
+    resize: none;
+    margin-top: 1rem;
+}
+
+.form__box button {
+    margin-top: 20px;
+}
+
+.close__btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    cursor: pointer;
+}
+
+.form__box p {
+    margin: 10px 0 ;
+}
+
+.form__box p small {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.btn {
+    padding: 0.5rem 4rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    background-color: #b59fd8;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+}
+
+
+/*R*/
+
+@media only screen and (max-width: 892px) {
+    .form__container {
+        height: 100%;
+    }
+
+    .form__box {
+        overflow: hidden scroll;
+    }
+
+    .form__box form {
+        display: flex;
+        justify-content: center;
+        height: 400px;
+    }
+
+    .form__box button {
+        margin-bottom: 2rem;
+    }
+}
