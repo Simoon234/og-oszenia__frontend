@@ -7,6 +7,7 @@ import {getLocation} from "../utlis/location";
 import {Success} from "./Success";
 import emailjs from '@emailjs/browser';
 import {LocationError} from "./LocationError";
+import {api} from "../config/api";
 
 
 interface AdForm {
@@ -48,7 +49,7 @@ export const Form = () => {
                 setError('Zły adres.')
             } else {
                 const {lat, lon} = location;
-                const res = await fetch('http://localhost:3001/ad', {
+                const res = await fetch(`${api}/ad`, {
                     method: 'POST',
                     headers: {
                         'Content-type': 'application/json',
@@ -78,7 +79,7 @@ export const Form = () => {
 
     if (id) {
         const params = {
-            link: `http://localhost:3001/ad/admin/accepted/${id}`
+            link: `${api}/api/ad/admin/accepted/${id}`
         };
         emailjs.send((process.env.REACT_APP_SERVICE_ID as string), (process.env.REACT_APP_TEMPLATE_ID as string), params, process.env.REACT_APP_PUBLIC).then(r => r.status);
 

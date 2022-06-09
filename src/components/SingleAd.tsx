@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import {Ad} from "types";
 
 import classes from '../styles/single.module.css';
+import {api} from "../config/api";
 
 interface AdId {
     id: string;
@@ -13,7 +14,7 @@ export const SingleAd = ({id, counts}: AdId) => {
 
     useEffect(() => {
         (async () => {
-            const res = await fetch(`http://localhost:3001/ad/${id}`);
+            const res = await fetch(`${api}/ad/${id}`);
             const data = await res.json();
             setAd(data);
         })();

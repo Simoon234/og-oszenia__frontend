@@ -8,6 +8,7 @@ import 'leaflet/dist/leaflet.css';
 import {useSelector} from "react-redux";
 import {RootState} from 'src/store/store';
 import {SingleAd} from "./SingleAd";
+import {api} from "../config/api";
 
 export const Map = () => {
     const text = useSelector((state: RootState) => state.ads.searchValue);
@@ -17,7 +18,7 @@ export const Map = () => {
 
     useEffect(() => {
         ( async () => {
-            const res = await fetch(`http://localhost:3001/ad/search/${text}`);
+            const res = await fetch(`${api}/ad/search/${text}`);
             const data = await res.json();
             setAds(data);
         })();
@@ -25,7 +26,7 @@ export const Map = () => {
 
 
     const click = async (id: string) => {
-        const res = await fetch(`http://localhost:3001/ad/${id}`);
+        const res = await fetch(`${api}/ad/${id}`);
         const data = await res.json();
         setCounts(data.visitors);
     };
