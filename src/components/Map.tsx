@@ -17,12 +17,14 @@ export const Map = () => {
 
 
     useEffect(() => {
-        ( async () => {
-            const res = await fetch(`${api}/ad/search/${text}`);
-            const data = await res.json();
-            setAds(data);
-        })();
+       const fetchAds = async () => {
+           const res = await fetch(`${api}/ad/search/${text}`);
+           setAds(await res.json());
+       }
+
+       fetchAds();
     }, [text])
+
 
 
     const click = async (id: string) => {

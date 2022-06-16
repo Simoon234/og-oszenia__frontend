@@ -5,7 +5,6 @@ import {Link} from "react-router-dom";
 import {Map} from "./Map";
 import {getLocation} from "../utlis/location";
 import {Success} from "./Success";
-import emailjs from '@emailjs/browser';
 import {LocationError} from "./LocationError";
 import {api} from "../config/api";
 
@@ -61,6 +60,7 @@ export const Form = () => {
                     })
                 })
                 const data = await res.json();
+                console.log(data)
                 setId(data.adID);
             }
 
@@ -78,11 +78,6 @@ export const Form = () => {
     };
 
     if (id) {
-        const params = {
-            link: `${api}/api/ad/admin/accepted/${id}`
-        };
-        emailjs.send((process.env.REACT_APP_SERVICE_ID as string), (process.env.REACT_APP_TEMPLATE_ID as string), params, process.env.REACT_APP_PUBLIC).then(r => r.status);
-
         return <Success id={id}/>
     } else if(error !== null) {
         return <LocationError/>

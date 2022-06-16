@@ -8,7 +8,7 @@
     width: 350px;
     top: 0;
     right: 0;
-    z-index: 1000;
+    z-index: 10000;
     animation: x 1s;
 }
 
@@ -24,7 +24,7 @@
 
 .images {
     width: 40px;
-    z-index: 1001;
+    z-index: 10001;
     cursor: pointer;
 }
 

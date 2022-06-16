@@ -11,8 +11,6 @@ export const Burger = () => {
     const open = () => {
         setToggle(prev => !prev);
     }
-
-    console.log(toggle)
     return (
         <>
             <SearchBar/>
